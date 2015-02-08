@@ -254,8 +254,6 @@ Lets look at some other examples of decimal to binary, the ones on the end try f
 65 = ?<br>
 31 = ?<br>
 
-Special thanks to **Jim Plush**
-
 #PHP'S BITWISE OPERATORS
 
 You can find complete detail on the PHP bitwise operators here: <a href='http://www.php.net/manual/en/language.operators.bitwise.php' target='_blank'>PHP'S BITWISE OPERATORS</a>
@@ -1024,3 +1022,4 @@ This would output the number 64. Why?? Well lets see using our table example
 
 How do we get 64? well bit shifting tells PHP to take the variable $a which in our case is 16 and shift if 2 bits which is basically like saying take 16 and multiply it by 2 twice. So 16 X 2 = 32 x 2 = 64
 
+Special thanks to **Jim Plush**
