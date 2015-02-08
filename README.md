@@ -307,4 +307,13 @@ two") </td>
 </table>
 
 
+####Lets use two variables to get started with the "And" operator &. 
+The & or "And" operator takes two values and returns a decimal version of the binary values the left and right variable share. So using our tables above we can see that the only bit these two share is in the 8 position so $a & $b = 8.
+
+```php
+$a =	9;
+$b =	10;
+echo $a & $b;
+```
+
 
