@@ -52,7 +52,7 @@ What does a byte look like?
             </td>
         </tr>
     <tr>
-        <td width="100">
+        <td>
         Place Value
         </td>
         <td> 
@@ -130,7 +130,7 @@ So if all bits are set and the value = 255 my byte would look like this
         <td></td>
     </tr>
     <tr> 
-        <td width="100">&nbsp;</td>
+        <td>&nbsp;</td>
         <td> 
           <div align="center">1
         </td>
@@ -258,6 +258,11 @@ Special thanks to **Jim Plush**
 
 #PHP'S BITWISE OPERATORS
 
+You can find complete detail on the PHP bitwise operators here: <a href='http://www.php.net/manual/en/language.operators.bitwise.php' target='_blank'>PHP'S BITWISE OPERATORS</a>
+
+What are going to cover? 
+We're going to cover the bitwise operators below and see how they work
+
 <table>
 <thead> 
 <tr> 
@@ -316,4 +321,706 @@ $b =	10;
 echo $a & $b;
 ```
 
+This would output the number 8. Why?? Well lets see using our table example
+
+<table align="left">
+<tbody><tr> 
+<td colspan="11"> 
+  <div align="center">1 
+    Byte ( 8 bits )
+</td>
+</tr>
+<tr> 
+<td>Place 
+  Value</td>
+<td> 
+  <div align="center">128
+</td>
+<td> 
+  <div align="center">64
+</td>
+<td> 
+  <div align="center">32
+</td>
+<td> 
+  <div align="center">16
+</td>
+<td> 
+  <div align="center">8
+</td>
+<td> 
+  <div align="center">4
+</td>
+<td> 
+  <div align="center">2
+</td>
+<td> 
+  <div align="center">1
+</td>
+<td></td>
+<td></td>
+</tr>
+<tr> 
+<td>$a</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">1</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">1</div>
+</td>
+<td> 
+  <div align="center">=</div>
+</td>
+<td> 
+  <div align="center">9</div>
+</td>
+</tr>
+<tr> 
+<td>$b</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">1</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">1</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">=</div>
+</td>
+<td> 
+  <div align="center">10</div>
+</td>
+</tr>
+</tbody></table>
+            
+So you can see from the table the only bit they share together is the 8 bit. So 8 gets returned.. not too hard eh? Lets look at another example of the & operator.
+
+```php
+$a =	36;
+$b =	103;
+echo $a & $b;
+```
+
+This would output the number 36. Why?? Well lets see using our table example again
+
+<table align="left">
+<tbody><tr> 
+<td colspan="11"> 
+  <div align="center">1 
+    Byte ( 8 bits )
+</td>
+</tr>
+<tr> 
+<td>Place 
+  Value</td>
+<td> 
+  <div align="center">128
+</td>
+<td> 
+  <div align="center">64
+</td>
+<td> 
+  <div align="center">32
+</td>
+<td> 
+  <div align="center">16
+</td>
+<td> 
+  <div align="center">8
+</td>
+<td> 
+  <div align="center">4
+</td>
+<td> 
+  <div align="center">2
+</td>
+<td> 
+  <div align="center">1
+</td>
+<td></td>
+<td></td>
+</tr>
+<tr> 
+<td>$a</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">1</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">1</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">=</div>
+</td>
+<td> 
+  <div align="center">36</div>
+</td>
+</tr>
+<tr> 
+<td>$b</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">1</div>
+</td>
+<td> 
+  <div align="center">1</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">1</div>
+</td>
+<td> 
+  <div align="center">1</div>
+</td>
+<td> 
+  <div align="center">1</div>
+</td>
+<td> 
+  <div align="center">=</div>
+</td>
+<td> 
+  <div align="center">103</div>
+</td>
+</tr>
+</tbody></table>
+            
+So you can see the only bits these two share together are the bits 32 and 4 which when added together return 36. This operator is saying "I want to know what bits you both have set in the same column"
+
+####Lets move on to the | also known as the "OR" operator.
+
+```php
+$a =	9;
+$b =	10;
+echo $a | $b;
+```
+
+This would output the number 11. Why?? Well lets see using our table example
+
+<table align="left">
+<tbody><tr> 
+<td colspan="11"> 
+  <div align="center">1 
+    Byte ( 8 bits )
+</td>
+</tr>
+<tr> 
+<td>Place 
+  Value</td>
+<td> 
+  <div align="center">128
+</td>
+<td> 
+  <div align="center">64
+</td>
+<td> 
+  <div align="center">32
+</td>
+<td> 
+  <div align="center">16
+</td>
+<td> 
+  <div align="center">8
+</td>
+<td> 
+  <div align="center">4
+</td>
+<td> 
+  <div align="center">2
+</td>
+<td> 
+  <div align="center">1
+</td>
+<td></td>
+<td></td>
+</tr>
+<tr> 
+<td>$a</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">1</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">1</div>
+</td>
+<td> 
+  <div align="center">=</div>
+</td>
+<td> 
+  <div align="center">9</div>
+</td>
+</tr>
+<tr> 
+<td>$b</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">1</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">1</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">=</div>
+</td>
+<td> 
+  <div align="center">10</div>
+</td>
+</tr>
+</tbody></table>
+
+If you notice we have 3 bits set, in the 8, 2, and 1 column.. add those up 8+2+1 and you get 11. It is just saying "I want to know what bits either one of you guys have set".
+
+####Moving on to the ^ operator also known as the "Xor" operator.
+
+```php
+$a =	9;
+$b =	10;
+echo $a ^ $b;
+```
+
+This would output the number 3. Why?? Well lets see using our table example
+
+<table align="left">
+<tbody><tr> 
+<td colspan="11"> 
+<div align="center">1 
+Byte ( 8 bits )
+</td>
+</tr>
+<tr> 
+<td>Place 
+Value</td>
+<td> 
+<div align="center">128
+</td>
+<td> 
+<div align="center">64
+</td>
+<td> 
+<div align="center">32
+</td>
+<td> 
+<div align="center">16
+</td>
+<td> 
+<div align="center">8
+</td>
+<td> 
+<div align="center">4
+</td>
+<td> 
+<div align="center">2
+</td>
+<td> 
+<div align="center">1
+</td>
+<td></td>
+<td></td>
+</tr>
+<tr> 
+<td>$a</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">1</div>
+</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">1</div>
+</td>
+<td> 
+<div align="center">=</div>
+</td>
+<td> 
+<div align="center">9</div>
+</td>
+</tr>
+<tr> 
+<td>$b</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">1</div>
+</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">1</div>
+</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">=</div>
+</td>
+<td> 
+<div align="center">10</div>
+</td>
+</tr>
+</tbody></table>
+
+The XOR operator wants to know "Tell me what bits you both have set but I don't want any bits you share" Notice we have 3 bits set but both $a and $b share the 8 bit, we dont want that one, we just want the 2 bit and the 1 bit that they each have set but don't share. Soooo 2+1 = 3
+
+####OK, here is one that gets tricky the ~ operator also known as the "NOT" operator.
+
+```php
+$a =	9;
+$b =	10;
+echo $a & ~$b;
+```
+
+This would output the number 1. Why?? Well lets see using our table example
+
+<table align="left">
+<tbody><tr> 
+<td colspan="11"> 
+<div align="center">1 
+Byte ( 8 bits )
+</td>
+</tr>
+<tr> 
+<td>Place 
+Value</td>
+<td> 
+<div align="center">128
+</td>
+<td> 
+<div align="center">64
+</td>
+<td> 
+<div align="center">32
+</td>
+<td> 
+<div align="center">16
+</td>
+<td> 
+<div align="center">8
+</td>
+<td> 
+<div align="center">4
+</td>
+<td> 
+<div align="center">2
+</td>
+<td> 
+<div align="center">1
+</td>
+<td></td>
+<td></td>
+</tr>
+<tr> 
+<td>$a</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">1</div>
+</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">1</div>
+</td>
+<td> 
+<div align="center">=</div>
+</td>
+<td> 
+<div align="center">9</div>
+</td>
+</tr>
+<tr> 
+<td>$b</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">1</div>
+</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">1</div>
+</td>
+<td> 
+<div align="center">0</div>
+</td>
+<td> 
+<div align="center">=</div>
+</td>
+<td> 
+<div align="center">10</div>
+</td>
+</tr>
+</tbody></table>
+
+
+The NOT operator wants to know what is set in $a but NOT set in $b because we marked $b with the ~operator in front of it. So looking at our table we can see the only bit set in $a thats not in $b is 1.
+
+What happens if we do this...
+
+```php
+$a =	9;
+$b =	10;
+echo ~$a & $b;
+```
+
+We get the value 2, because we want the bits set in $b but NOT set in $a this time, so since they both share the 8 bit, 2 bit is the only one $b has that $a does not.
+
+
+####BIT SHIFTING TIME!!! 
+
+```php
+$a =	16;
+echo $a << 2;
+```
+
+This would output the number 64. Why?? Well lets see using our table example
+
+<table align="left">
+<tbody><tr> 
+<td colspan="11"> 
+  <div align="center">1 
+    Byte ( 8 bits )
+</td>
+</tr>
+<tr> 
+<td>Place 
+  Value</td>
+<td> 
+  <div align="center">128
+</td>
+<td> 
+  <div align="center">64
+</td>
+<td> 
+  <div align="center">32
+</td>
+<td> 
+  <div align="center">16
+</td>
+<td> 
+  <div align="center">8
+</td>
+<td> 
+  <div align="center">4
+</td>
+<td> 
+  <div align="center">2
+</td>
+<td> 
+  <div align="center">1
+</td>
+<td></td>
+<td></td>
+</tr>
+<tr> 
+<td>$a - BEFORE!</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">1</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">=</div>
+</td>
+<td> 
+  <div align="center">16</div>
+</td>
+</tr>
+<tr> 
+<td>$a - AFTER!</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">1</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">0</div>
+</td>
+<td> 
+  <div align="center">=</div>
+</td>
+<td> 
+  <div align="center">64</div>
+</td>
+</tr>
+</tbody></table>
+
+How do we get 64? well bit shifting tells PHP to take the variable $a which in our case is 16 and shift if 2 bits which is basically like saying take 16 and multiply it by 2 twice. So 16 X 2 = 32 x 2 = 64
 
