@@ -1,5 +1,5 @@
 # PHP Bitwise Tutorial
-The bitwise operators and binary math in general have always been a mystery to me. If not for studying for the <a href="http://www.zend.com/en/yellow-pages/ZEND024326" target="_blank">Zend PHP Certified Engineer</a> exam I still would probably not care to learn them :) However here I am and I finally got down the mystery of bits and bytes.
+The bitwise operators and binary math in general have always been a mystery to me. If not for studying for the <a href="http://www.zend.com/en/yellow-pages/ZEND024326" target="_blank">Zend PHP Certified Engineer</a> exam. I still would probably not care to learn them :) However here I am and I finally got down the mystery of bits and bytes.
 
 What this tutorial will cover:
 
