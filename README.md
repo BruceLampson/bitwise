@@ -7,9 +7,7 @@ What this tutorial will cover:
 
 2. PHP's Bitwise Operators
 
-3. A simple usecase for why you would want to use bitwise operators
-
-PART 1 Bits, Bytes, and Binary Math
+#Bits, Bytes, and Binary Math
 
 ###BINARY MATH INTRODUCTION
 
@@ -57,35 +55,256 @@ What does a byte look like?
         <td width="100">
         Place Value
         </td>
-        <td width="30"> 
+        <td> 
           128
         </td>
-        <td width="30"> 
+        <td> 
           64
         </td>
-        <td width="30"> 
+        <td> 
           32
         </td>
-        <td width="30"> 
+        <td> 
           16
         </td>
-        <td width="30"> 
+        <td> 
           8
         </td>
-        <td width="30"> 
+        <td> 
           4
         </td>
-        <td width="30"> 
+        <td> 
           2
         </td>
-        <td width="30"> 
+        <td> 
           1
         </td>
-        <td width="30"></td>
-        <td width="30"></td>
+        <td></td>
+        <td></td>
     </tr>
     </tbody>
 </table>
 
 
+That is a representation of 1 Byte. 
+The "Place Value" column represents the math we did doing 2 to the power of 7,6,5,4,3,2,1,0
+
+So if all bits are set and the value = 255 my byte would look like this
+
+<table>
+    <tbody>
+        <tr> 
+            <td colspan="11"> 
+                1 Byte ( 8 bits )
+            </td>
+        </tr>
+    <tr> 
+        <td>
+            Place Value
+        </td>
+        <td> 
+          128
+        </td>
+        <td> 
+          64
+        </td>
+        <td> 
+          32
+        </td>
+        <td> 
+          16
+        </td>
+        <td> 
+          8
+        </td>
+        <td> 
+          4
+        </td>
+        <td> 
+          2
+        </td>
+        <td> 
+          1
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr> 
+        <td width="100">&nbsp;</td>
+        <td> 
+          <div align="center">1
+        </td>
+        <td> 
+          <div align="center">1
+        </td>
+        <td> 
+          <div align="center">1
+        </td>
+        <td> 
+          <div align="center">1
+        </td>
+        <td> 
+          <div align="center">1
+        </td>
+        <td> 
+          <div align="center">1
+        </td>
+        <td> 
+          <div align="center">1
+        </td>
+        <td> 
+          <div align="center">1
+        </td>
+        <td>
+          <div align="center">=
+        </td>
+        <td>255</td>
+    </tr>
+    </tbody>
+</table>
+
+How do we get 255?
+
+Lets take it right to left and add up all those values together
+1 + 2 + 4 + 8 + 16 + 32 + 64 + 128 = 255
+
+What would the number 22 look like?
+
+<table>
+    <tbody>
+    <tr> 
+    <td colspan="11"> 
+    1 
+    Byte ( 8 bits )
+    </td>
+    </tr>
+    <tr> 
+    <td>Place 
+    Value</td>
+    <td> 
+    128
+    </td>
+    <td> 
+    64
+    </td>
+    <td> 
+    32
+    </td>
+    <td> 
+    16
+    </td>
+    <td> 
+    8
+    </td>
+    <td> 
+    4
+    </td>
+    <td> 
+    2
+    </td>
+    <td> 
+    1
+    </td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr> 
+    <td>&nbsp;</td>
+    <td> 
+    <div align="center">0
+    </td>
+    <td> 
+    <div align="center">0
+    </td>
+    <td> 
+    <div align="center">0
+    </td>
+    <td> 
+    <div align="center">1
+    </td>
+    <td> 
+    <div align="center">0
+    </td>
+    <td> 
+    <div align="center">1
+    </td>
+    <td> 
+    <div align="center">1
+    </td>
+    <td> 
+    <div align="center">0
+    </td>
+    <td>
+    <div align="center">=
+    </td>
+    <td>
+    <div align="center">22
+    </td>
+    </tr>
+    </tbody>
+</table>
+            
+2 + 4 + 16 = 22
+
+Lets look at some other examples of decimal to binary, the ones on the end try for yourself.
+
+43 = 00101011<br>
+4 = 00000100<br>
+230 = ?<br>
+65 = ?<br>
+31 = ?<br>
+
 Special thanks to **Jim Plush**
+
+#PHP'S BITWISE OPERATORS
+
+<table>
+<thead> 
+<tr> 
+<th>Example</th>
+<th>Name</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody> 
+<tr> 
+<td>$a &amp; $b</td>
+<td>And</td>
+<td>Bits that are set in both $a and $b are set.</td>
+</tr>
+<tr> 
+<td>$a | $b</td>
+<td>Or</td>
+<td>Bits that are set in either $a or $b are set.</td>
+</tr>
+<tr> 
+<td>$a ^ $b</td>
+<td>Xor</td>
+<td>
+Bits that are set in $a or $b but not both are set. </td>
+</tr>
+<tr> 
+<td>~ $a</td>
+<td>Not</td>
+<td>
+Bits that are set in $a are not set, and vice versa. </td>
+</tr>
+<tr> 
+<td>$a &lt;&lt; $b</td>
+<td>Shift left</td>
+<td>
+Shift the bits of $a $b steps to the left (each step means "multiply by 
+two") </td>
+</tr>
+<tr> 
+<td>$a &gt;&gt; $b</td>
+<td>Shift right</td>
+<td>
+Shift the bits of $a $b steps to the right (each step means "divide by 
+two") </td>
+</tr>
+</tbody> 
+</table>
+
+
+
