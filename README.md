@@ -1,4 +1,5 @@
-# PHP Bitwise Tutorial
+#Bits, Bytes, Binary and Hex Math
+
 The bitwise operators and binary math in general have always been a mystery to me. If not for studying for the <a href="http://www.zend.com/en/yellow-pages/ZEND024326" target="_blank">Zend PHP Certified Engineer</a> exam. I still would probably not care to learn them :) However here I am and I finally got down the mystery of bits and bytes.
 
 What this tutorial will cover:
@@ -6,8 +7,6 @@ What this tutorial will cover:
 1. What are bits and bytes and binary math
 
 2. PHP's Bitwise Operators
-
-#Bits, Bytes, Binary and Hex Math
 
 ###BINARY MATH INTRODUCTION
 
