@@ -299,7 +299,7 @@ HEX numbers are composed of digits 0 through 9 like DEC but also adds A-F
 </tr>
 </tbody></table>
 
-####Here is a HEX number: 1E5DF
+###Here is a HEX number: 1E5DF
 
 To convert this to a DEC, we need to define the base for our power function. Since HEX is based on 16 different digits [0-9A-F], our base is 16.<br>
 
