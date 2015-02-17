@@ -299,9 +299,9 @@ HEX numbers are composed of digits 0 through 9 like DEC but also adds A-F
 </tr>
 </tbody></table>
 
-**Here is a HEX number: 1E5DF**
+####Here is a HEX number: 1E5DF
 
-To convert this to a DEC, we need to define the base for our power function. Since HEX is based on 16 different digits [0-9A-F], our base is 16.
+To convert this to a DEC, we need to define the base for our power function. Since HEX is based on 16 different digits [0-9A-F], our base is 16.<br>
 
 To convert from HEX to DEC, follow these steps: <br>
 
@@ -312,6 +312,7 @@ We know that E = 14 in DEC so we use this formula	(14*163) = 57344<br>
 We know that 1 = 1 in DEC so we use this formula	(1*164) = 65536<br>
 Now we add all of the numbers together to get the DEC number for HEX number 1E5DF:<br>
 15 + 208 + 1280 + 57344 + 65536 = 124383<br>
+
 
 So our answer is HEX 1E5DF = DEC 124383<br>
 
