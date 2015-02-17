@@ -303,17 +303,17 @@ HEX numbers are composed of digits 0 through 9 like DEC but also adds A-F
 
 To convert this to a DEC, we need to define the base for our power function. Since HEX is based on 16 different digits [0-9A-F], our base is 16.
 
-To convert from HEX to DEC, follow these steps:
+To convert from HEX to DEC, follow these steps: <br>
 
-We know that F = 15 in DEC so we use this formula	(15*160) = 15
-We know that D = 13 in DEC so we use this formula	(13*161) = 208
-We know that 5 = 5 in DEC so we use this formula	(5*162) = 1280
-We know that E = 14 in DEC so we use this formula	(14*163) = 57344
-We know that 1 = 1 in DEC so we use this formula	(1*164) = 65536
-Now we add all of the numbers together to get the DEC number for HEX number 1E5DF: 
-15 + 208 + 1280 + 57344 + 65536 = 124383 
+We know that F = 15 in DEC so we use this formula	(15*160) = 15<br>
+We know that D = 13 in DEC so we use this formula	(13*161) = 208<br>
+We know that 5 = 5 in DEC so we use this formula	(5*162) = 1280<br>
+We know that E = 14 in DEC so we use this formula	(14*163) = 57344<br>
+We know that 1 = 1 in DEC so we use this formula	(1*164) = 65536<br>
+Now we add all of the numbers together to get the DEC number for HEX number 1E5DF:<br>
+15 + 208 + 1280 + 57344 + 65536 = 124383<br>
 
-So our answer is HEX 1E5DF = DEC 124383
+So our answer is HEX 1E5DF = DEC 124383<br>
 
 #PHP'S BITWISE OPERATORS
 
