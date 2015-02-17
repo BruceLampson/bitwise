@@ -319,7 +319,7 @@ Now we add all of the numbers together to get the DEC number for HEX number 1E5D
 So our answer is HEX 1E5DF = DEC 124383<br>
 
 
-#PHP'S BITWISE OPERATORS
+#BITWISE OPERATORS (PHP)
 
 
 You can find complete detail on the PHP bitwise operators here: <a href='http://www.php.net/manual/en/language.operators.bitwise.php' target='_blank'>PHP'S BITWISE OPERATORS</a>
