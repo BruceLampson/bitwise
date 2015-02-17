@@ -300,7 +300,9 @@ HEX numbers are composed of digits 0 through 9 like DEC but also adds A-F
 </tbody>
 </table>
 
+
 ###Here is a HEX number: 1E5DF
+
 
 To convert this to a DEC, we need to define the base for our power function. Since HEX is based on 16 different digits [0-9A-F], our base is 16.<br>
 
@@ -317,7 +319,9 @@ Now we add all of the numbers together to get the DEC number for HEX number 1E5D
 
 So our answer is HEX 1E5DF = DEC 124383<br>
 
+
 #PHP'S BITWISE OPERATORS
+
 
 You can find complete detail on the PHP bitwise operators here: <a href='http://www.php.net/manual/en/language.operators.bitwise.php' target='_blank'>PHP'S BITWISE OPERATORS</a>
 
