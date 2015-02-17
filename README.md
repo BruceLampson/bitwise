@@ -7,13 +7,13 @@ What this tutorial will cover:
 
 2. PHP's Bitwise Operators
 
-#Bits, Bytes, and Binary Math
+#Bits, Bytes, Binary and Hex Math
 
 ###BINARY MATH INTRODUCTION
 
 The bitwise operators utilize something called Binary Math. If you already know binary math, skip ahead. Binary math is a BASE 2 numbering system, where as our normal everyday numbering system is a BASE 10 system. Think back to elementary school where we learned numbers this way...
 
-Think of the number 4768. Thats a normal everyday decimal number.
+Think of the number 4768. That's a normal everyday decimal number.
 
 If you write that out full its 4 THOUSAND, 7 HUNDRED, 6 TENS, 8 ONES
 or (4 * 103) + (7 * 102) + (6 * 101) + (8 * 100) = 4768
@@ -253,6 +253,67 @@ Lets look at some other examples of decimal to binary, the ones on the end try f
 230 = ?<br>
 65 = ?<br>
 31 = ?<br>
+
+###Converting from HEX to DEC
+
+HEX numbers are composed of digits 0 through 9 like DEC but also adds A-F
+
+<table>
+<tbody><tr align="center">
+<td>HEX</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>E</td>
+<td>F</td>
+</tr>
+<tr align="center">
+<td>DEC</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+<td>15</td>
+</tr>
+</tbody></table>
+
+**Here is a HEX number: 1E5DF**
+
+To convert this to a DEC, we need to define the base for our power function. Since HEX is based on 16 different digits [0-9A-F], our base is 16.
+
+To convert from HEX to DEC, follow these steps:
+
+We know that F = 15 in DEC so we use this formula	(15*160) = 15
+We know that D = 13 in DEC so we use this formula	(13*161) = 208
+We know that 5 = 5 in DEC so we use this formula	(5*162) = 1280
+We know that E = 14 in DEC so we use this formula	(14*163) = 57344
+We know that 1 = 1 in DEC so we use this formula	(1*164) = 65536
+Now we add all of the numbers together to get the DEC number for HEX number 1E5DF: 
+15 + 208 + 1280 + 57344 + 65536 = 124383 
+
+So our answer is HEX 1E5DF = DEC 124383
 
 #PHP'S BITWISE OPERATORS
 
