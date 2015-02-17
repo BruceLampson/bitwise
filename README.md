@@ -297,7 +297,8 @@ HEX numbers are composed of digits 0 through 9 like DEC but also adds A-F
 <td>14</td>
 <td>15</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 
 ###Here is a HEX number: 1E5DF
 
